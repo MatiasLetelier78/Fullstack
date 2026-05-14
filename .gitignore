@@ -1,19 +1,6 @@
-# IntelliJ
 .idea/
 *.iml
-
-# Maven
 target/
 **/target/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Wallet Oracle
 wallet/
 **/wallet/
-
-# Archivos locales sensibles
-.env
-application-local.properties
