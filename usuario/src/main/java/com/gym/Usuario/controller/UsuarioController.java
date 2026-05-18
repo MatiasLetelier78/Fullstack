@@ -27,9 +27,9 @@ public class UsuarioController {
         }
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Usuario> getUsuarioById(@PathVariable String id) {
-        Usuario buscado = usuarioService.buscarPorId(id);
+    @GetMapping("/{idUsuario}")
+    public ResponseEntity<Usuario> getUsuarioById(@PathVariable String idUsuario) {
+        Usuario buscado = usuarioService.buscarPorId(idUsuario);
         if (buscado != null) {
             return new ResponseEntity<>(buscado, HttpStatus.OK);
         } else {
@@ -57,9 +57,9 @@ public class UsuarioController {
         }
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteUsuario(@PathVariable String id) {
-        boolean res = usuarioService.borrarUsuario(id);
+    @DeleteMapping("/{idUsuario}")
+    public ResponseEntity<Void> deleteUsuario(@PathVariable String idUsuario) {
+        boolean res = usuarioService.borrarUsuario(idUsuario);
         if (res) {
             return new ResponseEntity<>(HttpStatus.OK);
         } else {
@@ -67,9 +67,9 @@ public class UsuarioController {
         }
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Usuario> updateUsuario(@PathVariable String id, @RequestBody @Valid Usuario nuevo) {
-        Usuario actualizado = usuarioService.actualizarUsuario(id, nuevo);
+    @PutMapping("/{idUsuario}")
+    public ResponseEntity<Usuario> updateUsuario(@PathVariable String idUsuario, @RequestBody @Valid Usuario nuevo) {
+        Usuario actualizado = usuarioService.actualizarUsuario(idUsuario, nuevo);
         if (actualizado != null) {
             return new ResponseEntity<>(actualizado, HttpStatus.OK);
         } else {
