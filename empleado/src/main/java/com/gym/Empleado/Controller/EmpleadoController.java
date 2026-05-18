@@ -43,7 +43,12 @@ public class EmpleadoController {
 
     @PostMapping("/")
     public ResponseEntity<Empleado> agregar(@RequestBody @Valid Empleado empleado) {
-        return new ResponseEntity<>(HttpStatus.OK);
+        Empleado nuevo = empleadoService.agregarEmpleado(empleado);
+        if(nuevo!=null){
+            return new ResponseEntity<>(nuevo, HttpStatus.OK);
+        }else{
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
     @DeleteMapping("/{idUsuario}")

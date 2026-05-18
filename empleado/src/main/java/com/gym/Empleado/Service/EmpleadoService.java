@@ -25,6 +25,7 @@ public class EmpleadoService {
     public Empleado agregarEmpleado(Empleado nuevo){
         return empleadoRepository.save(nuevo);
     }
+
     public boolean deleteByIdUsuario(String idUsuario){
         Empleado empleado = empleadoRepository.findByIdUsuario(idUsuario);
         if(empleado != null){
