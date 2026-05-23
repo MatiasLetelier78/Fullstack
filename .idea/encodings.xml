@@ -2,9 +2,16 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Asistencia/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Empleado/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cliente/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Contrato/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/EurekaServer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Inscripcion/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Membresia/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Pago/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Producto/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Proiducto/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Sucursal/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/empleado/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/usuario/src/main/java" charset="UTF-8" />
   </component>
