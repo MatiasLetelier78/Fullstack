@@ -18,21 +18,27 @@ public class ClienteService {
         return clienteRepository.findAll();
     }
 
-    public ClienteModelo buscarClientePorId(String id){
-        return clienteRepository.findById(id).get();
+    public ClienteModelo buscarClientePorId(String idUsuario){
+        return clienteRepository.findById(idUsuario).get();
     }
 
-    public ClienteModelo AgregarCliente(ClienteModelo cliente) {
+    public ClienteModelo agregarCliente(ClienteModelo cliente) {
         return clienteRepository.save(cliente);
     }
-    public void borrarCliente(String id) {
-        clienteRepository.deleteById(id);
-    }
+
     public ClienteModelo buscarClientePorIdUsuario(String idUsuario){
         return clienteRepository.findByidUsuario(idUsuario);
     }
+    public boolean borrarCliente(String idUsuario) {
+        ClienteModelo cliente = buscarClientePorIdUsuario(idUsuario);
+        if(cliente != null){
+            clienteRepository.deleteById(idUsuario);
+            return true;
+        }else{
+            return false;
+        }
+    }
     public ClienteModelo actualizarCliente(ClienteModelo cliente) {
-
         return clienteRepository.save(cliente);
     }
 

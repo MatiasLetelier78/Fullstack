@@ -27,7 +27,6 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
         <module name="Sucursal" />
-        <module name="Contrato" />
         <module name="Empleado" />
         <module name="asistencia" />
         <module name="empleado" />
@@ -35,10 +34,12 @@
         <module name="Inscripcion" />
         <module name="Asistencia" />
         <module name="Cliente" />
+        <module name="clase" />
         <module name="Membresia" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Contrato" target="21" />
       <module name="eureka-server" target="21" />
       <module name="GYM" target="1.5" />
       <module name="membresia" target="21" />
@@ -60,6 +61,7 @@
       <module name="Proiducto" options="-parameters" />
       <module name="Sucursal" options="-parameters" />
       <module name="asistencia" options="-parameters" />
+      <module name="clase" options="-parameters" />
       <module name="empleado" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="usuario" options="-parameters" />

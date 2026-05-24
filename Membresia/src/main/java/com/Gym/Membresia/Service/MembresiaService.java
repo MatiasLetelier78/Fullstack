@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class MembresiaService {
+public class MembresiaService{
 
     @Autowired
     private MembresiaRepository membresiaRepository;

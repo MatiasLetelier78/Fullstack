@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 @Data
 @Entity
 @Table(name = "MEMBRESIA")
-public class Membresia {
+public class Membresia{
     @Id
     @Column(name = "id_membresia", length = 6, nullable = false)
     private String idMembresia;

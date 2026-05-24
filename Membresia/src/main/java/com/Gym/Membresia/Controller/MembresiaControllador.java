@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/membresias")
-public class MembresiaControllador {
+public class MembresiaControllador{
 
     @Autowired
     private MembresiaService membresiaService;
