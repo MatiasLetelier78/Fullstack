@@ -2,10 +2,21 @@ package com.Gym.Inscripcion.DTO;
 
 import lombok.Data;
 
+import java.time.LocalDate;
+
 @Data
-public class ClienteDTO {
+public class UsuarioDTO {
 
     private String idUsuario;
-    private String nombre;
-    private String apellido;
+    private String pnombreUsuario;
+    private String snombreUsuario;
+    private String appaternoUsuario;
+    private String apmaternoUsuario;
+    private String emailUsuario;
+    private String passwordUsuario;
+    private Long telefonoUsuario;
+    private LocalDate fechaNacimientoUsuario;
+    private String rolUsuario;
+    private LocalDate fechaRegistroUsuario;
+    private String runUsuario;
 }
