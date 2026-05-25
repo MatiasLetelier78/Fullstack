@@ -34,20 +34,38 @@
         <module name="producto" />
         <module name="clase" />
         <module name="ejercicio" />
+        <module name="Empleado" />
+        <module name="asistencia" />
+        <module name="empleado" />
+        <module name="Inscripcion" />
+        <module name="usuario" />
+        <module name="Asistencia" />
+        <module name="Cliente" />
+        <module name="clase" />
+        <module name="Membresia" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="asistencia" target="21" />
-      <module name="empleado" target="21" />
+      <module name="Contrato" target="21" />
       <module name="eureka-server" target="21" />
       <module name="GYM" target="1.5" />
+      <module name="membresia" target="21" />
+      <module name="Producto" target="21" />
+      <module name="Proiducto" target="21" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Asistencia" options="-parameters" />
+      <module name="Cliente" options="-parameters" />
+      <module name="Contrato" options="-parameters" />
       <module name="Empleado" options="-parameters" />
       <module name="EurekaServer" options="-parameters" />
+      <module name="Inscripcion" options="-parameters" />
+      <module name="Membresia" options="-parameters" />
+      <module name="Pago" options="-parameters" />
+      <module name="Producto" options="-parameters" />
+      <module name="Proiducto" options="-parameters" />
       <module name="Sucursal" options="-parameters" />
       <module name="asistencia" options="-parameters" />
       <module name="clase" options="-parameters" />

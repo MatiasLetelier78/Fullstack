@@ -14,6 +14,12 @@
         <option value="$PROJECT_DIR$/proveedor/pom.xml" />
         <option value="$PROJECT_DIR$/producto/pom.xml" />
         <option value="$PROJECT_DIR$/ejercicio/pom.xml" />
+        <option value="$PROJECT_DIR$/Cliente/pom.xml" />
+        <option value="$PROJECT_DIR$/Contrato/pom.xml" />
+        <option value="$PROJECT_DIR$/Membresia/pom.xml" />
+        <option value="$PROJECT_DIR$/Inscripcion/pom.xml" />
+        <option value="$PROJECT_DIR$/Pago/pom.xml" />
+        <option value="$PROJECT_DIR$/Proiducto/pom.xml" />
         <option value="$PROJECT_DIR$/clase/pom.xml" />
       </list>
     </option>
