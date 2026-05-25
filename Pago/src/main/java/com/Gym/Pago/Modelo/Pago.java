@@ -24,7 +24,7 @@ public class Pago {
     @Column(name = "monto_pago", length = 6, nullable = false)
     private BigDecimal montoPago ;
 
-    @Column(name="monto_pago", nullable = false)
+    @Column(name="fecha_pago", nullable = false)
     private LocalDate fechaPago;
 
     @Column(name="estado_pago", length = 20, nullable = false)
