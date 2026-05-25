@@ -10,5 +10,5 @@ import java.util.List;
 public interface PagoRepository extends JpaRepository<Pago, String> {
     Pago findByIdPago(String idPago);
     List<Pago> findByIdUsuario(String idUsuario);
-    Pago findByIdMembresia(String idMembresia);
+    List<Pago> findByIdMembresia(String idMembresia);
 }

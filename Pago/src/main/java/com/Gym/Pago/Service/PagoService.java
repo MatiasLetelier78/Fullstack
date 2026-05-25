@@ -24,9 +24,7 @@ public class PagoService {
 
     public List<Pago> findByIdUsuario(String idUsuario) { return pagoRepository.findByIdUsuario(idUsuario); }
 
-    public Pago findByIdMembresia(String idMembresia){
-        return pagoRepository.findByIdMembresia(idMembresia);
-    }
+    public List<Pago> findByIdMembresia(String idMembresia) { return pagoRepository.findByIdMembresia(idMembresia); }
 
     public Pago agregarPago(Pago pago){
         return pagoRepository.save(pago);
