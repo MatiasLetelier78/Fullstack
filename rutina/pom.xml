@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.Gym</groupId>
-	<artifactId>clase</artifactId>
+	<artifactId>rutina</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>
@@ -78,7 +78,6 @@
             <artifactId>spring-cloud-openfeign-core</artifactId>
         </dependency>
     </dependencies>
-	</dependencies>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
