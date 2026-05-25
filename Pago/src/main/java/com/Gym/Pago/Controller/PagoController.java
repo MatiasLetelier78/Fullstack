@@ -38,12 +38,13 @@ public class PagoController {
     }
 
     @GetMapping("/id_usuario/{idUsuario}")
-    public ResponseEntity<Pago> getPagoByIdUsuario(@PathVariable String idUsuario){
-        Pago BuscaIdUsuario = pagoService.findByIdUsuario(idUsuario);
-        if(BuscaIdUsuario != null){
-            return new ResponseEntity<>(BuscaIdUsuario, HttpStatus.OK);
-        }else{
+    public ResponseEntity<List<Pago>> getPagoByIdUsuario(@PathVariable String idUsuario){
+        List<Pago> pagosUsuario = pagoService.findByIdUsuario(idUsuario);
+
+        if(pagosUsuario.isEmpty()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }else{
+            return new ResponseEntity<>(pagosUsuario, HttpStatus.OK);
         }
     }
 
