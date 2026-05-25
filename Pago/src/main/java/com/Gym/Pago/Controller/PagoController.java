@@ -51,14 +51,12 @@ public class PagoController {
     @GetMapping("/id_membresia/{idMembresia}")
     public ResponseEntity<List<Pago>> getPagoByIdMembresia(@PathVariable String idMembresia){
         List<Pago> pagosMembresia = pagoService.findByIdMembresia(idMembresia);
-
         if(pagosMembresia.isEmpty()){
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }else{
-            return new ResponseEntity<>(pagosMembresia, HttpStatus.OK);
+            return new ResponseEntity<>(pagosMembresia,HttpStatus.OK);
         }
     }
-
     @PostMapping("/")
     public ResponseEntity<Pago> crearPago(@RequestBody @Valid Pago pago){
         Pago nuevoPago = pagoService.agregarPago(pago);

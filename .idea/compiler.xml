@@ -9,17 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="EurekaServer" />
       </profile>
-      <profile name="Annotation profile for Pago" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-        </processorPath>
-        <module name="Pago" />
-      </profile>
-      <profile name="Annotation profile for Inscripcion" enabled="true">
+      <profile name="Annotation profile for usuario" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -30,9 +20,10 @@
         <module name="Empleado" />
         <module name="asistencia" />
         <module name="empleado" />
-        <module name="Inscripcion" />
         <module name="usuario" />
+        <module name="Inscripcion" />
         <module name="Asistencia" />
+        <module name="Pago" />
         <module name="Cliente" />
         <module name="clase" />
         <module name="Membresia" />
