@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Date;
 
 @Data
@@ -43,15 +45,15 @@ public class Clase {
 
     @NotNull(message = "El horario es obligatorio")
     @Column(name = "horario_clase", nullable = false)
-    private Date horarioClase;
+    private LocalDate horarioClase;
 
     @NotNull(message = "La hora de inicio es obligatoria")
     @Column(name = "hora_inicio_clase", nullable = false)
-    private Date horaInicioClase;
+    private LocalTime horaInicioClase;
 
     @NotNull(message = "La hora de término es obligatoria")
     @Column(name = "hora_termino_clase", nullable = false)
-    private Date horaTerminoClase;
+    private LocalTime horaTerminoClase;
 
     @NotBlank(message = "El id de sucursal es obligatorio")
     @Column(name = "id_sucursal", length = 6, nullable = false)
