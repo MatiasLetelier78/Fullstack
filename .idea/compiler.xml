@@ -19,7 +19,7 @@
         </processorPath>
         <module name="Pago" />
       </profile>
-      <profile name="Annotation profile for usuario" enabled="true">
+      <profile name="Annotation profile for Inscripcion" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -30,8 +30,8 @@
         <module name="Empleado" />
         <module name="asistencia" />
         <module name="empleado" />
-        <module name="usuario" />
         <module name="Inscripcion" />
+        <module name="usuario" />
         <module name="Asistencia" />
         <module name="Cliente" />
         <module name="clase" />
