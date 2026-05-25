@@ -22,9 +22,7 @@ public class PagoService {
         return pagoRepository.findByIdPago(idPago);
     }
 
-    public Pago findByIdUsuario(String idUsuario){
-        return pagoRepository.findByIdUsuario(idUsuario);
-    }
+    public List<Pago> findByIdUsuario(String idUsuario) { return pagoRepository.findByIdUsuario(idUsuario); }
 
     public Pago findByIdMembresia(String idMembresia){
         return pagoRepository.findByIdMembresia(idMembresia);
