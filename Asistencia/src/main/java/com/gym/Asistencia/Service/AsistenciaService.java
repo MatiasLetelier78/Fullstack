@@ -20,17 +20,17 @@ public class AsistenciaService {
     public Asistencia findByIdAsistencia(String idAsistencia){
         return asistenciaRepository.findByIdAsistencia(idAsistencia);
     }
-    public Asistencia findByIdUsuario(String idUsuario) {
+    public List<Asistencia> findByIdUsuario(String idUsuario) {
         return asistenciaRepository.findByIdUsuario(idUsuario);
     }
-    public Asistencia findByIdSucursal(String idSucursal) {
+    public List<Asistencia> findByIdSucursal(String idSucursal) {
         return asistenciaRepository.findByIdSucursal(idSucursal);
     }
     public Asistencia addAsistencia(Asistencia asistencia) {
         return asistenciaRepository.save(asistencia);
     }
-    public boolean deleteAsistenciaByIdUsuario(String idUsuario) {
-        Asistencia asistencia = asistenciaRepository.findByIdUsuario(idUsuario);
+    public boolean deleteAsistenciaByIdAsistencia(String idAsistencia) {
+        Asistencia asistencia = asistenciaRepository.findByIdAsistencia(idAsistencia);
         if (asistencia != null) {
             asistenciaRepository.delete(asistencia);
             return true;
@@ -39,7 +39,7 @@ public class AsistenciaService {
         }
     }
     public Asistencia updateAsistenciaByIdAsistencia(Asistencia asistencia, String idAsistencia) {
-        Asistencia a = asistenciaRepository.findByIdUsuario(idAsistencia);
+        Asistencia a = asistenciaRepository.findByIdAsistencia(idAsistencia);
         if (a != null) {
             a.setFechaAsistencia(asistencia.getFechaAsistencia());
             a.setHoraSalida(asistencia.getHoraSalida());

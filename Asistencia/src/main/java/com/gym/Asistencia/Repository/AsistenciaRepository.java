@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface AsistenciaRepository extends JpaRepository<Asistencia, String> {
     Asistencia findByIdAsistencia(String idAsistencia);
-    Asistencia findByIdUsuario(String idUsuario);
-    Asistencia findByIdSucursal(String idSucursal);
+    List<Asistencia> findByIdUsuario(String idUsuario);
+    List<Asistencia> findByIdSucursal(String idSucursal);
 
 }
