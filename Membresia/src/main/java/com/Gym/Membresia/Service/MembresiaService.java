@@ -50,4 +50,31 @@ public class MembresiaService{
             return null;
         }
     }
+    public Membresia actualizarParcial(String id, Membresia datosActualizados) {
+        Membresia membresiaExistente = membresiaRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Membresía no encontrada con ID: " + id));
+
+        if (datosActualizados.getNombreMembresia() != null) {
+            membresiaExistente.setNombreMembresia(datosActualizados.getNombreMembresia());
+        }
+
+        if (datosActualizados.getDescripcionMembresia() != null) {
+            membresiaExistente.setDescripcionMembresia(datosActualizados.getDescripcionMembresia());
+        }
+
+        if (datosActualizados.getPrecioMembresia() != null) {
+            membresiaExistente.setPrecioMembresia(datosActualizados.getPrecioMembresia());
+        }
+
+        if (datosActualizados.getDuracionDias() != null) {
+            membresiaExistente.setDuracionDias(datosActualizados.getDuracionDias());
+        }
+
+        if (datosActualizados.getEstadoMembresia() != null) {
+            membresiaExistente.setEstadoMembresia(datosActualizados.getEstadoMembresia());
+        }
+
+        return membresiaRepository.save(membresiaExistente);
+    }
 }
+
