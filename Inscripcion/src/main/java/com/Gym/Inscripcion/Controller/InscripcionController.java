@@ -19,11 +19,6 @@ public class InscripcionController {
         return inscripcionService.listarInscripciones();
     }
 
-    @GetMapping("/id_clase/{idClase}")
-    public List<Inscripcion> buscarPorIdClase(@PathVariable String idClase) {
-        return inscripcionService.findByIdUsuario(idClase);
-    }
-
     @GetMapping("/id_usuario/{idUsuario}")
     public List<Inscripcion> buscarPorIdUsuario(@PathVariable String idUsuario) {
         return inscripcionService.findByIdUsuario(idUsuario);

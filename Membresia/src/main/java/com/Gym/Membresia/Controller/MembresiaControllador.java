@@ -19,7 +19,7 @@ public class MembresiaControllador{
     private MembresiaService membresiaService;
 
     @GetMapping("")
-    public ResponseEntity <List<Membresia>> getAllMembresias(@PathVariable String idMembresia){
+    public ResponseEntity <List<Membresia>> getAllMembresias(){
         List<Membresia> listado = membresiaService.listarMembresias();
         if(listado.isEmpty()){
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -68,5 +68,12 @@ public class MembresiaControllador{
         }
     }
 
+    @PatchMapping("/{id}")
+    public ResponseEntity<Membresia> actualizarParcial(
+            @PathVariable String id,
+            @RequestBody Membresia datosActualizados) {
 
+        Membresia membresiaActualizada = membresiaService.actualizarParcial(id, datosActualizados);
+        return ResponseEntity.ok(membresiaActualizada);
+    }
 }
