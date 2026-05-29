@@ -2,7 +2,6 @@ package com.Gym.Cliente.Service;
 
 import com.Gym.Cliente.Modelo.ClienteModelo;
 import com.Gym.Cliente.Repository.ClienteRepository;
-import com.netflix.discovery.converters.Auto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
