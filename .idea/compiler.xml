@@ -10,6 +10,17 @@
         <module name="EurekaServer" />
       </profile>
       <profile name="Annotation profile for usuario" enabled="true">
+      <profile name="Annotation profile for Empleado" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="Empleado" />
+      </profile>
+      <profile name="Annotation profile for clase" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -17,6 +28,13 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
         <module name="Sucursal" />
+        <module name="rutina" />
+        <module name="proveedor" />
+        <module name="usuario" />
+        <module name="Asistencia" />
+        <module name="producto" />
+        <module name="clase" />
+        <module name="ejercicio" />
         <module name="Empleado" />
         <module name="asistencia" />
         <module name="empleado" />
@@ -53,8 +71,12 @@
       <module name="Sucursal" options="-parameters" />
       <module name="asistencia" options="-parameters" />
       <module name="clase" options="-parameters" />
+      <module name="ejercicio" options="-parameters" />
       <module name="empleado" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="producto" options="-parameters" />
+      <module name="proveedor" options="-parameters" />
+      <module name="rutina" options="-parameters" />
       <module name="usuario" options="-parameters" />
     </option>
   </component>

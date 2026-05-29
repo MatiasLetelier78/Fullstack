@@ -29,7 +29,7 @@ public class ClaseController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Clase> getClaseById(@PathVariable String id) {
-        Clase buscada = claseService.buscarPorId(id);
+        Clase buscada = claseService.findByIdClase(id);
         if (buscada != null) {
             return new ResponseEntity<>(buscada, HttpStatus.OK);
         } else {
@@ -37,15 +37,6 @@ public class ClaseController {
         }
     }
 
-    @GetMapping("/sucursal/{idSucursal}")
-    public ResponseEntity<List<Clase>> getClasesBySucursal(@PathVariable String idSucursal) {
-        List<Clase> listado = claseService.buscarPorSucursal(idSucursal);
-        if (listado.isEmpty()) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        } else {
-            return new ResponseEntity<>(listado, HttpStatus.OK);
-        }
-    }
 
     @PostMapping("/")
     public ResponseEntity<Clase> createClase(@RequestBody @Valid Clase clase) {

@@ -57,7 +57,7 @@ public class SucursalController {
         }
     }
 
-    @DeleteMapping("/{id_sucursal}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteSucursal(@PathVariable String id) {
         boolean res = sucursalService.borrarSucursalPorCodigoSucursal(id);
         if (res) {
@@ -67,7 +67,7 @@ public class SucursalController {
         }
     }
 
-    @PutMapping("/{id_sucursal}")
+    @PutMapping("/{id}")
     public ResponseEntity<Sucursal> updateSucursal(@PathVariable String id, @RequestBody @Valid Sucursal nuevo) {
         Sucursal actualizado = sucursalService.actualizarSucursal(nuevo, id);
         if (actualizado != null) {
