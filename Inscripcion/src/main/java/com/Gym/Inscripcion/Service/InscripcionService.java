@@ -43,16 +43,17 @@ public class InscripcionService {
     public boolean deleteInscripcion(String idUsuario, String idClase) {
         try {
             InscripcionID id = new InscripcionID(idUsuario, idClase);
-            if(id != null){
-                log.info("Eliminando la inscripcion con id de Clase {} y id de Usuario {}",idClase, idUsuario);
+
+            if (inscripcionRepository.existsById(id)) {
+                log.info("Eliminando la inscripcion con id de Clase {} y id de Usuario {}", idClase, idUsuario);
                 inscripcionRepository.deleteById(id);
                 return true;
-            }else {
-                log.warn("Error al intentar eliminar la inscripcion con id de clase {} y id de usuario {}",idClase, idUsuario) ;
+            } else {
+                log.warn("No se encontró la inscripcion con id de clase {} y id de usuario {}", idClase, idUsuario);
                 return false;
             }
-        }catch (Exception e){
-            log.error("Error al eliminar la inscripcion {}",e.getMessage());
+        } catch (Exception e) {
+            log.error("Error al eliminar la inscripcion: {}", e.getMessage());
             throw new RuntimeException(e);
         }
     }
