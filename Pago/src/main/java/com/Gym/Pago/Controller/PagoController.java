@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 @RestController
 @RequestMapping("/api/v1/pagos")
 public class PagoController {
@@ -49,12 +48,12 @@ public class PagoController {
     }
 
     @GetMapping("/id_membresia/{idMembresia}")
-    public ResponseEntity<Pago> getPagoByIdMembresia(@PathVariable String idMembresia){
-        Pago BuscaIdMembresia = pagoService.findByIdMembresia(idMembresia);
-        if(BuscaIdMembresia != null){
-            return new ResponseEntity<>(BuscaIdMembresia, HttpStatus.OK);
+    public ResponseEntity<List<Pago>> getPagoByIdMembresia(@PathVariable String idMembresia){
+        List<Pago> pagosMembresia = pagoService.findByIdMembresia(idMembresia);
+        if(pagosMembresia.isEmpty()){
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }else{
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(pagosMembresia,HttpStatus.OK);
         }
     }
     @PostMapping("/")
