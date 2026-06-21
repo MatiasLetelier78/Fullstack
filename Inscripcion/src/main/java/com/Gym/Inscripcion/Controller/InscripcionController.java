@@ -6,7 +6,6 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -37,7 +36,7 @@ public class InscripcionController {
 
     @GetMapping("/id_usuario/{idUsuario}")
     @Operation(summary = "Obtener las inscripciones por el ID de usuario", description = "Obtener las inscripciones por el ID de usuario")
-    public ResponseEntity<Inscripcion> buscarPorIdUsuario(@Parameter(description = "") @PathVariable String idUsuario) {
+    public ResponseEntity<Inscripcion> buscarPorIdUsuario(@Parameter(description = "ID de la inscripcion a consultar") @PathVariable String idUsuario) {
         List<Inscripcion> buscada = inscripcionService.findByIdUsuario(idUsuario);
         if(buscada.isEmpty()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -57,6 +56,7 @@ public class InscripcionController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
+
 
     @DeleteMapping("/{idUsuario}/{idClase}")
     @Operation(summary = "Eliminar una inscripcion por el ID de usuario y clase", description = "Eliminar una inscripcion por el ID de usuario y clase")

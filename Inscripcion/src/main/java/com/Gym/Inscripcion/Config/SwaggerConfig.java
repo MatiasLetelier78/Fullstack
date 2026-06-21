@@ -15,4 +15,5 @@ public class SwaggerConfig {
                         .title("Gym API")
                         .description("API REST para el sistema de la GYM"));
     }
+
 }

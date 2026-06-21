@@ -45,7 +45,6 @@ public class ClientController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-
     @PostMapping("/")
     @Operation(summary = "Crear un nuevo cliente", description = "Crear un nuevo cliente")
     @ApiResponse(responseCode = "201", description = "Cliente creado exitosamente")
@@ -58,7 +57,7 @@ public class ClientController {
         }
     }
 
-    @DeleteMapping("/idUsuario")
+    @DeleteMapping("/{idUsuario}")
     @Operation(summary = "Eliminar un cliente por su ID", description = "Eliminar un cliente por su ID")
     @ApiResponse(responseCode = "204", description = "Cliente eliminado exitosamente")
     public ResponseEntity<Void> borrarCliente(@PathVariable String idUsuario){

@@ -16,4 +16,3 @@ public class SwaggerConfig {
                         .description("API REST para el sistema de la GYM"));
     }
 }
-

@@ -78,6 +78,7 @@ public class PagoController {
         }
     }
 
+
     @DeleteMapping("/{id}")
     @Operation(summary = "Permite eliminar un pago en base a su ID")
     @ApiResponse(responseCode = "204", description = "Pago eliminado exitosamente")
