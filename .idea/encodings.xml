@@ -12,8 +12,12 @@
     <file url="file://$PROJECT_DIR$/Proiducto/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Sucursal/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/clase/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ejercicio/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/empleado/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/producto/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/proveedor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rutina/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/usuario/src/main/java" charset="UTF-8" />
   </component>
 </project>

@@ -38,22 +38,22 @@ public class AsistenciaController {
     }
 
     @GetMapping("/id_usuario/{idUsuario}")
-    public ResponseEntity<Asistencia> getAsistenciaByIdUsuario(@PathVariable String idUsuario) {
-        Asistencia buscado = asistenciaService.findByIdUsuario(idUsuario);
-        if (buscado != null) {
-            return new ResponseEntity<>(buscado, HttpStatus.OK);
+    public ResponseEntity<List<Asistencia>> getAsistenciaByIdUsuario(@PathVariable("idUsuario") String idUsuario) {
+        List<Asistencia> buscado = asistenciaService.findByIdUsuario(idUsuario);
+        if (buscado.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(buscado, HttpStatus.OK);
         }
     }
 
     @GetMapping("/id_sucursal/{idSucursal}")
-    public ResponseEntity<Asistencia> getAsistenciaByIdSucursal(@PathVariable String idSucursal) {
-        Asistencia buscado = asistenciaService.findByIdSucursal(idSucursal);
-        if (buscado != null) {
-            return new ResponseEntity<>(buscado, HttpStatus.OK);
+    public ResponseEntity<List<Asistencia>> getAsistenciaByIdSucursal(@PathVariable("idSucursal") String idSucursal) {
+        List<Asistencia> buscado = asistenciaService.findByIdSucursal(idSucursal);
+        if (buscado.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(buscado, HttpStatus.OK);
         }
     }
 
@@ -69,7 +69,7 @@ public class AsistenciaController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteAsistencia(@PathVariable String id) {
-        boolean res = asistenciaService.deleteAsistenciaByIdUsuario(id);
+        boolean res = asistenciaService.deleteAsistenciaByIdAsistencia(id);
         if (res) {
             return new ResponseEntity<>(HttpStatus.OK);
         } else {
