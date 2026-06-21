@@ -9,7 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="EurekaServer" />
       </profile>
-      <profile name="Annotation profile for usuario" enabled="true">
+      <profile name="Annotation profile for Pago" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -20,13 +20,13 @@
         <module name="Empleado" />
         <module name="asistencia" />
         <module name="empleado" />
-        <module name="usuario" />
         <module name="Inscripcion" />
+        <module name="usuario" />
         <module name="Asistencia" />
         <module name="Pago" />
         <module name="Cliente" />
-        <module name="clase" />
         <module name="Membresia" />
+        <module name="clase" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
