@@ -25,7 +25,7 @@ public class ClientController {
     @GetMapping("")
     @Operation(summary = "Listar todos los clientes", description = "Listar todos los clientes existentes")
     @ApiResponse(responseCode = "200", description = "Consulta exitosa, se entrega una lista de los clientes")
-    @ApiResponse(responseCode = "204", description = "Consulta exitosa, pero no se encontraron clientes")
+    @ApiResponse(responseCode =  "204", description = "Consulta exitosa, pero no se encontraron clientes")
     public ResponseEntity<List<ClienteModelo>> getAllClientes(){
         List<ClienteModelo> listado = clienteService.listarClientes();
         if(listado.isEmpty()){
