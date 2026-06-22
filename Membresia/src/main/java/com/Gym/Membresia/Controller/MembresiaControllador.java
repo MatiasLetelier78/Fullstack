@@ -37,6 +37,7 @@ public class MembresiaControllador{
 
     @GetMapping("/{idMembresia}")
     @Operation(summary = "Se busca una membresia en base al Id Membresia")
+    @ApiResponse(responseCode = "200", description = "Consulta exitosa, se entrega la membresia solicitada")
     public ResponseEntity<Membresia> getUsuarioById(@Parameter(description = "ID del paciente a consultar")@PathVariable String idMembresia){
         Membresia buscado = membresiaService.buscarMembresiaPorId(idMembresia);
         if(buscado != null){

@@ -13,7 +13,7 @@ public class SwaggerConfig {
         return new OpenAPI()
                 .info(new Info()
                     .title("Gym API")
-                    .description("API REST para el sistema de la GYM"));
+                    .description("API REST para el sistema de Membresia de GYM"));
     }
 }
 
