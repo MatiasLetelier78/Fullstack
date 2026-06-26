@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface MembresiaRepository extends JpaRepository<Membresia, String> {
     Membresia findByNombreMembresia(String nombreMembresia);
+    Membresia findByIdMembresia(String idMembresia);
 }
