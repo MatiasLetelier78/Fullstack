@@ -8,7 +8,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Data
@@ -22,7 +21,7 @@ public class Pago {
     private String idPago;
 
     @Column(name = "monto_pago", length = 6, nullable = false)
-    private BigDecimal montoPago ;
+    private Integer montoPago ;
 
     @Column(name="fecha_pago", nullable = false)
     private LocalDate fechaPago;
