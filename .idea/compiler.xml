@@ -9,7 +9,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="EurekaServer" />
       </profile>
+      <profile name="Annotation profile for rutina" enabled="true">
+      <profile name="Annotation profile for Pago" enabled="true">
       <profile name="Annotation profile for usuario" enabled="true">
+      <profile name="Annotation profile for Empleado" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -17,6 +20,19 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
         <module name="Sucursal" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="rutina" />
+        <module name="Inscripcion" />
+        <module name="producto" />
+        <module name="ejercicio" />
+        <module name="clase" />
+        <module name="Membresia" />
+        <module name="Sucursal" />
+        <module name="Empleado" />
+        <module name="asistencia" />
+        <module name="empleado" />
+        <module name="proveedor" />
         <module name="usuario" />
         <module name="Asistencia" />
         <module name="Empleado" />
@@ -25,19 +41,42 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+        <module name="Pago" />
+        <module name="Cliente" />
+        <module name="Membresia" />
+        <module name="clase" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Contrato" target="21" />
       <module name="eureka-server" target="21" />
       <module name="GYM" target="1.5" />
+      <module name="membresia" target="21" />
+      <module name="Producto" target="21" />
+      <module name="Proiducto" target="21" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Asistencia" options="-parameters" />
+      <module name="Cliente" options="-parameters" />
+      <module name="Contrato" options="-parameters" />
       <module name="Empleado" options="-parameters" />
       <module name="EurekaServer" options="-parameters" />
+      <module name="Inscripcion" options="-parameters" />
+      <module name="Membresia" options="-parameters" />
+      <module name="Pago" options="-parameters" />
+      <module name="Producto" options="-parameters" />
+      <module name="Proiducto" options="-parameters" />
       <module name="Sucursal" options="-parameters" />
       <module name="asistencia" options="-parameters" />
+      <module name="clase" options="-parameters" />
+      <module name="ejercicio" options="-parameters" />
       <module name="empleado" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="producto" options="-parameters" />
+      <module name="proveedor" options="-parameters" />
+      <module name="rutina" options="-parameters" />
       <module name="usuario" options="-parameters" />
     </option>
   </component>
