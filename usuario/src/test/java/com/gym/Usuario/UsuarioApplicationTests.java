@@ -12,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @Slf4j
 @SpringBootTest
+
 class UsuarioApplicationTests {
 
 	@Autowired
@@ -42,13 +43,27 @@ class UsuarioApplicationTests {
 
 	}
 
+	@Test
+	@DisplayName("Validar Largo Rut")
+	void validarLargoRut() {
+		Usuario usuario = usuarioService.buscarPorId("US0005");
+		assertEquals(10,usuario.getRunUsuario().length());
+	}
 
 	@Test
-	@DisplayName("Validación largo de rut")
-	void validarLargoRut() {
-		Usuario usuario = usuarioService.buscarPorId("US0001");
-		log.info("Validando largo de rut de usuario {}", usuario.getPnombreUsuario()+ usuario.getAppaternoUsuario());
-		assertEquals(10,usuario.getRunUsuario().length());
+	@DisplayName("Validar cantidad de usuarios")
+	void validarCantidadUsuarios() {
+		int cantidad = usuarioService.listarUsuarios().size();
+		assertEquals(6,cantidad);
+	}
 
+
+
+	@Test
+	@DisplayName("Validación nombre correcto")
+	void validarNombreCorrectoYFechaNula() {
+		Usuario usuario = usuarioService.buscarPorId("US0007");
+		log.info("Validando nombre correcto");
+		assertEquals("Javiera",usuario.getPnombreUsuario());
 	}
 }
