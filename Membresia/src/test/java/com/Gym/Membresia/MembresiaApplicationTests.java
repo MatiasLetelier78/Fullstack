@@ -12,7 +12,7 @@ import javax.swing.*;
 
 import java.math.BigDecimal;
 
-import static org.junit.jupiter.api.Assertions.*;
+	import static org.junit.jupiter.api.Assertions.*;
 
 @Slf4j
 @SpringBootTest
@@ -41,6 +41,7 @@ class MembresiaApplicationTests {
 		membresia.setPrecioMembresia(BigDecimal.valueOf(29990.0));
 		assertEquals(BigDecimal.valueOf(29990.0), membresia.getPrecioMembresia());
 	}
+
 	@Test
 	@DisplayName("Revisando el estado de la membresia")
 	void checkState(){
