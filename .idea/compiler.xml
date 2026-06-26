@@ -35,6 +35,12 @@
         <module name="proveedor" />
         <module name="usuario" />
         <module name="Asistencia" />
+        <module name="Empleado" />
+        <module name="asistencia" />
+        <module name="empleado" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
         <module name="Pago" />
         <module name="Cliente" />
         <module name="Membresia" />
