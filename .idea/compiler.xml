@@ -20,11 +20,11 @@
         <module name="usuario" />
         <module name="Asistencia" />
         <module name="Empleado" />
+        <module name="asistencia" />
+        <module name="empleado" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="asistencia" target="21" />
-      <module name="empleado" target="21" />
       <module name="eureka-server" target="21" />
       <module name="GYM" target="1.5" />
     </bytecodeTargetLevel>
